@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ball"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtscore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnsubteam2"
+        android:layout_alignRight="@+id/btnsubteam2"
+        android:layout_below="@+id/textView"
+        android:text="0"
+        android:textSize="50sp" />
+    <TextView
+        android:id="@+id/txtscore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50sp"
+        android:layout_alignBaseline="@+id/txtscore2"
+        android:layout_alignBottom="@+id/txtscore2"
+        android:layout_alignLeft="@+id/btnaddteam1"
+        android:layout_alignStart="@+id/btnaddteam1" />
+
+
+    <TextView
+        android:id="@+id/team2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEAM 2"
+        android:textColor="#990066"
+        android:textSize="20sp"
+        android:layout_above="@+id/textView"
+        android:layout_alignLeft="@+id/btnstart"
+        android:layout_alignStart="@+id/btnstart" />
+
+    <TextView
+        android:id="@+id/team1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnsubteam1"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnsubteam1"
+        android:layout_marginTop="11dp"
+        android:text="TEAM 1"
+        android:textColor="#990066"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:hint="enter name for team2"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/btnDisplay"
+        android:layout_alignLeft="@+id/btnDisplay"
+        android:layout_alignStart="@+id/btnDisplay" />
+
+    <EditText
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtname2"
+        android:layout_alignLeft="@+id/txtname2"
+        android:layout_alignStart="@+id/txtname2"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="enter name for team1"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnaddteam1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnsubteam1"
+        android:layout_alignLeft="@+id/txtname"
+        android:layout_alignStart="@+id/txtname"
+        android:onClick="AddTeam1"
+        android:text="Team1_ Add" />
+
+    <Button
+        android:id="@+id/btnsubteam1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Subteam1"
+        android:text="Team1_sub"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/btnaddteam1"
+        android:layout_alignEnd="@+id/btnaddteam1" />
+
+    <Button
+        android:id="@+id/btnaddteam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnsubteam1"
+        android:layout_toEndOf="@+id/txtname"
+        android:layout_toRightOf="@+id/txtname"
+        android:onClick="Addteam2"
+        android:text="TEAM2_ADD" />
+
+    <Button
+        android:id="@+id/btnsubteam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnsubteam1"
+        android:layout_alignLeft="@+id/btnaddteam2"
+        android:layout_alignStart="@+id/btnaddteam2"
+        android:onClick="Subteam2"
+        android:text="TEAM2_SUB" />
+
+
+    <Button
+        android:id="@+id/btnDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:onClick="save"
+        android:text="DISPLAY"
+        android:textColor="#ff6666" />
+
+    <Button
+        android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Reset"
+        android:text="Reset"
+        android:textColor="#ff6666"
+        android:layout_below="@+id/txtname2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="by T.Kgonyane"
+        android:fontFamily="cursive"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnDisplay"
+        android:layout_alignStart="@+id/btnDisplay" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="the sky is the limit!"
+        android:layout_below="@+id/team1"
+        android:layout_alignLeft="@+id/team1"
+        android:layout_alignStart="@+id/team1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="the dube birds!"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp" />
+
+</RelativeLayout>
